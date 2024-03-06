@@ -203,5 +203,55 @@ namespace TestClass
             // Assert
             Assert.That(actual, Is.EqualTo(expected));
         }
+        [Test]
+        public void TestInvalidResponse1_ReturnsError()
+        {
+            // Arrange
+            int firstSide = 3;
+            int secondSide = 4;
+            int thirdSide = 10;
+
+            string expected = ("A triangle cannot be formed");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void TestInvalidResponse2_ReturnsError()
+        {
+            // Arrange
+            int firstSide = 4;
+            int secondSide = 4;
+            int thirdSide = 11;
+
+            string expected = ("A triangle cannot be formed");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void TestInvalidResponse3_ReturnsError()
+        {
+            // Arrange
+            int firstSide = 6;
+            int secondSide = 12;
+            int thirdSide = 26;
+
+            string expected = ("A triangle cannot be formed");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
