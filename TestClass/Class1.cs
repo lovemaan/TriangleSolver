@@ -74,5 +74,84 @@ namespace TestClass
             // Assert
             Assert.That(actual, Is.EqualTo(expected));
         }
+        [Test]
+        public void TestScaleneTriangle_Valid1_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 2;
+            int secondSide = 4;
+            int thirdSide = 5;
+
+            string expected = ("A scalene triangle is formed");
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void TestScaleneTriangle_Valid2_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 8;
+            int secondSide = 11;
+            int thirdSide = 13;
+
+            string expected = ("A scalene triangle is formed");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void TestScaleneTriangle_Valid3_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 3;
+            int secondSide = 14;
+            int thirdSide = 16;
+
+            string expected = ("A scalene triangle is formed");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void  TestScaleneTriangle_Valid4_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 7;
+            int secondSide = 10;
+            int thirdSide = 12;
+
+            string expected = ("A scalene triangle is formed");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+        [Test]
+        public void TestScaleneTriangle_Valid5_ReturnsScalene()
+        {
+            // Arrange
+            int firstSide = 6;
+            int secondSide = 8;
+            int thirdSide = 10;
+
+            string expected = ("A scalene triangle is formed");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
