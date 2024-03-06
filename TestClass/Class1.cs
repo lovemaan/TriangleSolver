@@ -153,5 +153,55 @@ namespace TestClass
             // Assert
             Assert.That(actual, Is.EqualTo(expected));
         }
+        [Test]
+        public void TestZeroLengthSide1_ReturnsError()
+        {
+            // Arrange
+            int firstSide = 0;
+            int secondSide = 3;
+            int thirdSide = 6;
+
+            string expected = ("At least one side entered had a zero - invalid triangle");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void TestZeroLengthSide2_ReturnsError()
+        {
+            // Arrange
+            int firstSide = 5;
+            int secondSide = 0;
+            int thirdSide = 8;
+
+            string expected = ("At least one side entered had a zero - invalid triangle");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void TestZeroLengthSide3_ReturnsError()
+        {
+            // Arrange
+            int firstSide = 4;
+            int secondSide = 7;
+            int thirdSide = 0;
+
+            string expected = ("At least one side entered had a zero - invalid triangle");
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
